@@ -13,9 +13,9 @@ class First extends React.Component{
 
     render(){
         let messageCart = 'Нет сообщений';
-        let messLength = this.props.stores.storage.message.length;
+        console.log(this.props.stores.storage.message.length);
 
-        if(messLength !== 0) {
+        if(this.props.stores.storage.message.length !== 0) {
             messageCart = this.props.stores.storage.message.map((res, index) => {
                 return <Card border="light" key={index}>
                     <Card.Header>{res.name}</Card.Header>
