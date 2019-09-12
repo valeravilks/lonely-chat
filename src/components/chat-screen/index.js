@@ -7,22 +7,29 @@ class First extends React.Component{
 
     sendMessage = () => {
         event.preventDefault();
+        console.log(1);
         this.props.stores.storage.setMessage(this.input.current.value);
     };
 
     render(){
+        let messageCart = 'Нет сообщений';
+        let messLength = this.props.stores.storage.message.length;
 
-        let messageCart = this.props.stores.storage.message.map(res => {
-            return <Card border="light">
-                <Card.Header>Валерий</Card.Header>
-                <Card.Body>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk
-                        of the card's content.
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        });
+        if(messLength !== 0) {
+            messageCart = this.props.stores.storage.message.map((res, index) => {
+                return <Card border="light" key={index}>
+                    <Card.Header>{res.name}</Card.Header>
+                    <Card.Body>
+                        <Card.Text>
+                            {res.message}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            });
+        } else {
+
+        }
+
 
         return (
             <div>

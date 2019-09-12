@@ -12,6 +12,10 @@ export default class{
     @action loadStore(){
         this.name = sessionStorage.getItem('name');
         this.message = JSON.parse(localStorage.getItem("message"));
+        if(!localStorage.getItem("message")){
+            localStorage.setItem("message", "[]");
+            console.log(localStorage.getItem("message"));
+        }
     }
 
     @action setName = (name) => {
