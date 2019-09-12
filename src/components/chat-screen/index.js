@@ -1,14 +1,14 @@
 import React from 'react';
 import withStore from '~/hocs/withStore';
 
-class Chat extends React.Component{
+class First extends React.Component{
     render(){
         return (
             <div>
-                Chat
+                First
             </div>
         );
     }
 }
 
-export default withStore(Chat);
+export default withStore(First);

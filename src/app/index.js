@@ -7,9 +7,13 @@ import withStore from '~/hocs/withStore';
 class App extends React.Component{
     render(){
         return(
-            <div>
-                <FirstScreen/>
-                <ChatScreen/>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-12 col-lg-6">
+                        <FirstScreen/>
+                        <ChatScreen/>
+                    </div>
+                </div>
             </div>
         )
     }
