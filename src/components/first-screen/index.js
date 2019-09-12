@@ -3,6 +3,14 @@ import withStore from '~/hocs/withStore';
 import { Form, Button } from 'react-bootstrap';
 
 class Chat extends React.Component{
+    input = React.createRef();
+
+    sendName = () => {
+        event.preventDefault();
+        this.props.stores.storage.setName(this.input.current.value);
+        this.forceUpdate();
+    };
+
     render(){
         return (
             <div>
@@ -14,9 +22,10 @@ class Chat extends React.Component{
                             required
                             type="text"
                             placeholder=""
+                            ref={this.input}
                         />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button onClick={this.sendName} variant="primary" type="submit">
                         Start chat
                     </Button>
                 </Form>

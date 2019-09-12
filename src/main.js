@@ -5,6 +5,8 @@ import App from './app';
 import {Provider} from 'mobx-react';
 import stores from '~s';
 
+stores.storage.loadName();
+
 ReactDom.render(<Provider stores={stores}>
     <App/>
 </Provider>, document.querySelector('#app'));

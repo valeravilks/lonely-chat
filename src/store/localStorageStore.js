@@ -1,13 +1,14 @@
 import {observable, computed, action} from 'mobx';
 
 export default class{
-    @action nameCheck = () => {
-        let name = sessionStorage.getItem('name');
+    @observable name = '';
 
-        if(name){
-            return false;
-        } else {
-            return true;
-        }
+    @action loadName(){
+        this.name = sessionStorage.getItem('name');
     }
+
+    @action setName = (name) => {
+        sessionStorage.setItem('name', name);
+        this.name = name;
+    };
 }

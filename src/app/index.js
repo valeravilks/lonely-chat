@@ -8,8 +8,8 @@ class App extends React.Component{
 
     render(){
         let screen;
-
-        if(this.props.stores.storage.nameCheck()) {
+        console.log(this.props.stores.storage.name);
+        if(!this.props.stores.storage.name) {
             screen = <FirstScreen />
         } else {
             screen = <ChatScreen />
