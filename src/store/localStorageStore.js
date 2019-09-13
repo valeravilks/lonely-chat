@@ -4,13 +4,16 @@ export default class{
     @observable message = [];
     @observable name = '';
 
-    @computed get messageUpdate(){
+    @action messageUpdate(){
         let storageMess = localStorage.getItem("message");
         this.message = JSON.parse(storageMess);
     }
 
-    @action loadStore(){
+    @action loadApp(){
         this.name = sessionStorage.getItem('name');
+        addEventListener('storage', () => {
+           this.messageUpdate();
+        });
         if(localStorage.getItem("message")){
             this.message = JSON.parse(localStorage.getItem("message"));
         }

@@ -8,7 +8,7 @@ class Chat extends React.Component{
     sendName = () => {
         event.preventDefault();
         this.props.stores.storage.setName(this.input.current.value);
-        this.forceUpdate();
+        // this.forceUpdate();
     };
 
     render(){
