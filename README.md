@@ -1,4 +1,4 @@
-#Lonely chat
+# Lonely chat
 
 How to use chat:
 - start chat
