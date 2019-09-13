@@ -5,7 +5,9 @@ import App from './app';
 import {Provider} from 'mobx-react';
 import stores from '~s';
 
-stores.storage.loadStore();
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+stores.storage.loadApp();
 
 ReactDom.render(<Provider stores={stores}>
     <App/>

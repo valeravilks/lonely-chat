@@ -7,13 +7,12 @@ class First extends React.Component{
 
     sendMessage = () => {
         event.preventDefault();
-        console.log(1);
         this.props.stores.storage.setMessage(this.input.current.value);
+        this.input.current.value = '';
     };
 
     render(){
         let messageCart = 'Нет сообщений';
-        console.log(this.props.stores.storage.message.length);
 
         if(this.props.stores.storage.message.length !== 0) {
             messageCart = this.props.stores.storage.message.map((res, index) => {
