@@ -1,9 +1,10 @@
 # Lonely chat
 
-How to use chat:
-- start chat
-- enter your name
-- write chat messages
+This chat was created as part of self-education. In this chat you can talk to yourself in the browser. In order to start you need:
+* enter your own and press start
+* further you can write messages
+* if you open a new tab, you can again enter your name and correspond with the first tab
 
-Username linked to browser tab using session storage.
-Chat messages are stored in local storage.
+This chat is based on localStorage and sessionStorage
+
+You can see the chat operation by the link (<a href="app.html" target="_blank">click</a>)
