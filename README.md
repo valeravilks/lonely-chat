@@ -7,4 +7,4 @@ This chat was created as part of self-education. In this chat you can talk to yo
 
 This chat is based on localStorage and sessionStorage
 
-You can see the chat operation by the link (<a href="app.html" target="_blank">click</a>)
+You can see the chat operation by the link (<a href="https://valeravilks.github.io/lonely-chat/app.html" target="_blank">click</a>)
