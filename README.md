@@ -1,5 +1,7 @@
 # Lonely chat
 
+![](loneley.gif)
+
 This chat was created as part of self-education. In this chat you can talk to yourself in the browser. In order to start you need:
 * enter your own and press start
 * further you can write messages
